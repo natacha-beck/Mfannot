@@ -71,7 +71,7 @@ RUN cd git_repositories
 RUN git clone https://github.com/prioux/PirObject.git; cp PirObject/lib/PirObject.pm /etc/perl/;
 
 # Install all PirModels
-RUN git clone https://github.com/natacha-beck/PirModels.git; cd /PirModels/; git checkout mini_exons; cd /;  mv PirModels /root/
+RUN git clone https://github.com/natacha-beck/PirModels.git; cd /PirModels/; git checkout mini_exons_cox2; cd /;  mv PirModels /root/
 
 # Install flip
 RUN git clone https://github.com/BFL-lab/flip.git; cd flip/src/; gcc -o /usr/local/bin/flip flip.c;
@@ -92,7 +92,7 @@ RUN git clone https://github.com/BFL-lab/mf2sqn.git; cp mf2sqn/mf2sqn /usr/local
 RUN git clone https://github.com/BFL-lab/grab-fasta.git; cp grab-fasta/grab-fasta /usr/local/bin/;cp grab-fasta/grab-seq /usr/local/bin/
 
 # Install MFannot
-RUN git clone https://github.com/natacha-beck/mfannot.git; cd /mfannot/; git checkout mini_exons; cd /; cp mfannot/mfannot /usr/local/bin/;cp -r mfannot/examples /
+RUN git clone https://github.com/natacha-beck/mfannot.git; cd /mfannot/; git checkout mini_exons_cox2; cd /; cp mfannot/mfannot /usr/local/bin/;cp -r mfannot/examples /
 
 ################
 # Install data #
