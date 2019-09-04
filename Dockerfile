@@ -28,7 +28,7 @@ RUN apt-get install -y git \
 RUN cpanm XML::DOM
 RUN cpanm XML::DOM::XPath
 RUN cpanm LWP::UserAgent.pm
-RUN cpanm Bio::AlignIO
+RUN cpanm --force Bio::AlignIO
 
 ###########################
 # Install external progam  #
