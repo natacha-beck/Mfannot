@@ -1588,7 +1588,7 @@ sub FillHYPPROTSArrayWithFLIPBLASTPROTSArray {
             $newhypprot->set_hypfusiongene($info_gene_fusion);
         }
         &AdjustStartByHMM($newhypprot, $seq, $contigname);
-        if ($newhypprot->get_trimIndexThree > 15) {
+        if ($newhypprot->get_trimIndexThree && $newhypprot->get_trimIndexThree > 15) {
            my $info = [
                         $newhypprot->get_name(),
                         $newhypprot->get_contigname(),
