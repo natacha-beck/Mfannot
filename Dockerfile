@@ -93,7 +93,7 @@ RUN git clone https://github.com/BFL-lab/mf2sqn.git; cp mf2sqn/mf2sqn /usr/local
 RUN git clone https://github.com/BFL-lab/grab-fasta.git; cp grab-fasta/grab-fasta /usr/local/bin/;cp grab-fasta/grab-seq /usr/local/bin/
 
 # Install MFannot
-RUN git clone https://github.com/natacha-beck/mfannot.git; cd /mfannot/; git checkout mini_exons; cd /; cp mfannot/mfannot /usr/local/bin/;cp -r mfannot/examples /
+RUN git clone https://github.com/natacha-beck/mfannot.git; cd /mfannot/; git checkout mini_exons; cd /;cp -r mfannot/examples /
 
 ################
 # Install data #
@@ -114,12 +114,13 @@ RUN mv /root/PirModels /
 # Set ENV variable #
 ####################
 
-ENV RNAFINDER_CFG_PATH /
-ENV MF2SQN_LIB /mf2sqn/lib/
-ENV MFANNOT_LIB_PATH /MFannot_data/protein_collections/
-ENV MFANNOT_EXT_CFG_PATH /MFannot_data/config
-ENV MFANNOT_MOD_PATH /MFannot_data/models/
-ENV BLASTMAT /BLASTMAT/
-ENV EGC /MFannot_data/EGC/
-ENV ERPIN_MOD_PATH /MFannot_data/models/Erpin_models/
-ENV PIR_DATAMODEL_PATH /PirModels
+ENV RNAFINDER_CFG_PATH="/:${RNAFINDER_CFG_PATH}"
+ENV MF2SQN_LIB="/mf2sqn/lib/:${MF2SQN_LIB}";
+ENV MFANNOT_LIB_PATH="/MFannot_data/protein_collections/:${MFANNOT_LIB_PATH}"
+ENV MFANNOT_EXT_CFG_PATH="/MFannot_data/config:${MFANNOT_MOD_PATH}"
+ENV MFANNOT_MOD_PATH="/MFannot_data/models/:${MFANNOT_MOD_PATH}"
+ENV BLASTMAT="/BLASTMAT/:${BLASTMAT}"
+ENV EGC="/MFannot_data/EGC/:${EGC}"
+ENV ERPIN_MOD_PATH="/MFannot_data/models/Erpin_models:${ERPIN_MOD_PATH}"
+ENV PIR_DATAMODEL_PATH="/PirModels:${PIR_DATAMODEL_PATH}"
+ENV PATH="/mfannot:${PATH}"
