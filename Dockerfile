@@ -114,13 +114,12 @@ RUN mv /root/PirModels /
 # Set ENV variable #
 ####################
 
-ENV RNAFINDER_CFG_PATH="/:${RNAFINDER_CFG_PATH}"
-ENV MF2SQN_LIB="/mf2sqn/lib/:${MF2SQN_LIB}";
-ENV MFANNOT_LIB_PATH="/MFannot_data/protein_collections/:${MFANNOT_LIB_PATH}"
-ENV MFANNOT_EXT_CFG_PATH="/MFannot_data/config:${MFANNOT_MOD_PATH}"
-ENV MFANNOT_MOD_PATH="/MFannot_data/models/:${MFANNOT_MOD_PATH}"
-ENV BLASTMAT="/BLASTMAT/:${BLASTMAT}"
-ENV EGC="/MFannot_data/EGC/:${EGC}"
-ENV ERPIN_MOD_PATH="/MFannot_data/models/Erpin_models:${ERPIN_MOD_PATH}"
-ENV PIR_DATAMODEL_PATH="/PirModels:${PIR_DATAMODEL_PATH}"
-ENV PATH="/mfannot:${PATH}"
+ENV RNAFINDER_CFG_PATH /
+ENV MF2SQN_LIB /mf2sqn/lib/
+ENV MFANNOT_LIB_PATH /MFannot_data/protein_collections/
+ENV MFANNOT_EXT_CFG_PATH /MFannot_data/config
+ENV MFANNOT_MOD_PATH /MFannot_data/models/
+ENV BLASTMAT /BLASTMAT/
+ENV EGC /MFannot_data/EGC/
+ENV ERPIN_MOD_PATH /MFannot_data/models/Erpin_models/
+ENV PIR_DATAMODEL_PATH /PirModels
