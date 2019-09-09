@@ -123,3 +123,4 @@ ENV BLASTMAT /BLASTMAT/
 ENV EGC /MFannot_data/EGC/
 ENV ERPIN_MOD_PATH /MFannot_data/models/Erpin_models/
 ENV PIR_DATAMODEL_PATH /PirModels
+ENV PATH="/mfannot:${PATH}"
